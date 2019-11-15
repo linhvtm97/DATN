@@ -1,70 +1,104 @@
-import React from 'react';
+import React from "react";
 
 class Footer extends React.Component {
-    render() {
-        return (
-        <div>
-          <footer className="footer">
-    <div className="container">
-        <div className="row">
-        <div className="col-sm-3">
-            <h4 className="title">Sumi</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit, libero a molestie consectetur, sapien elit lacinia mi.</p>
-            <ul className="social-icon">
-            <a href="#" className="social"><i className="fa fa-facebook" aria-hidden="true"></i></a>
-            <a href="#" className="social"><i className="fa fa-twitter" aria-hidden="true"></i></a>
-            <a href="#" className="social"><i className="fa fa-instagram" aria-hidden="true"></i></a>
-            <a href="#" className="social"><i className="fa fa-youtube-play" aria-hidden="true"></i></a>
-            <a href="#" className="social"><i className="fa fa-google" aria-hidden="true"></i></a>
-            <a href="#" className="social"><i className="fa fa-dribbble" aria-hidden="true"></i></a>
+  render() {
+    return (
+      <div className="footer">
+        <div className="container">
+          {/* quick links */}
+          <div className="col-md-3 col-sm-6">
+            <h3 className="text-white">Quick Links</h3>
+            <ul>
+              <li className="mb-3">
+                <a href="/about">About Us</a>
+              </li>
+              <li className="mb-3">
+                <a href="/contact">Contact Us</a>
+              </li>
+              <li className="mb-3">
+                <a href="help.html">Help</a>
+              </li>
+              <li className="mb-3">
+                <a href="faqs.html">Faqs</a>
+              </li>
+              <li className="mb-3">
+                <a href="terms.html">Terms of use</a>
+              </li>
+              <li>
+                <a href="privacy.html">Privacy Policy</a>
+              </li>
             </ul>
-            </div>
-        <div className="col-sm-3">
-            <h4 className="title">My Account</h4>
-            <span className="acount-icon">          
-            <a href="#"><i className="fa fa-heart" aria-hidden="true"></i> Wish List</a>
-            <a href="#"><i className="fa fa-cart-plus" aria-hidden="true"></i> Cart</a>
-            <a href="#"><i className="fa fa-user" aria-hidden="true"></i> Profile</a>
-            <a href="#"><i className="fa fa-globe" aria-hidden="true"></i> Language</a>           
-          </span>
-            </div>
-        <div className="col-sm-3">
-            <h4 className="title">Category</h4>
-            <div className="category">
-            <a href="#">men</a>
-            <a href="#">women</a>
-            <a href="#">boy</a>
-            <a href="#">girl</a>
-            <a href="#">bag</a>
-            <a href="#">teshart</a>
-            <a href="#">top</a>
-            <a href="#">shos</a>
-            <a href="#">glass</a>
-            <a href="#">kit</a>
-            <a href="#">baby dress</a>
-            <a href="#">kurti</a>           
-            </div>
-            </div>
-        <div className="col-sm-3">
-            <h4 className="title">Payment Methods</h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <ul className="payment">
-            <li><a href="#"><i className="fa fa-cc-amex" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i className="fa fa-credit-card" aria-hidden="true"></i></a></li>            
-            <li><a href="#"><i className="fa fa-paypal" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i className="fa fa-cc-visa" aria-hidden="true"></i></a></li>
+          </div>
+          <div className="col-md-3 col-sm-6">
+            <h3 className="text-white">Get in Touch</h3>
+            <ul>
+              <li className="text-white">
+                <i className="fa fa-map-marker" /> 123 Sebastian, USA.</li>
+              <li className="text-white">
+                <i className="fa fa-mobile" /> 333 222 3333 </li>
+              <li className="text-white">
+                <i className="fa fa-phone" /> +222 11 4444 </li>
+              <li className="text-white">
+                <i className="fa fa-envelope-open" />
+                <a href="mailto:example@mail.com"> mail 1@example.com</a>
+              </li>
+              <li>
+                <i className="fa fa-envelope-open" />
+                <a href="mailto:example@mail.com"> mail 2@example.com</a>
+              </li>
             </ul>
+          </div>
+          <div className="col-md-3 col-sm-6">
+            {/* newsletter */}
+            <h3 className="text-white font-weight-bold mb-3">Newsletter</h3>
+            <p className="text-white  mb-3">Free Delivery on your first order!</p>
+            <form action="#" method="post">
+              <div className="form-group">
+                <input type="email" className="form-control" placeholder="Email" name="email" required />
+                <button
+                  type="submit"
+                  className="btn btn-primary"
+                >
+                  Submit
+                 </button>
+              </div>
+            </form>
+            {/* //newsletter */}
+          </div>
+          {/* social icons */}
+          <div className="col-md-3 col-sm-6">
+            <h3 className="text-white">Follow Us on</h3>
+            <div>
+              <ul>
+                <li>
+                  <a href="/#">
+                    <i className="fa fa-facebook" aria-hidden="true" />
+                  </a>
+                </li>
+                <li>
+                  <a href="/#">
+                    <i className="fa fa-twitter" />
+                  </a>
+                </li>
+                <li>
+                  <a href="/#">
+                    <i className="fa fa-instagram" />
+                  </a>
+                </li>
+              </ul>
             </div>
+          </div>
+          {/* //social icons */}
         </div>
-        <hr/>
-        <div className="row text-center"> © 2017. Made with  by sumi9xm.</div>
+        {/* copyright */}
+        <div className="copy-right py-3">
+          <div className="container">
+            <p className="text-center text-white">© 2018 Give Away Store. All rights reserved</p>
+          </div>
         </div>
-    </footer>
-    
-        </div>
-        );
-
-    }
+      </div>
+    );
+  }
 }
 
 export default Footer;

@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 // import Menu from './components/Menu/Menu';
 import routes from './routes';
-import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
+import {Switch,Route,BrowserRouter as Router} from 'react-router-dom';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 
@@ -15,7 +15,7 @@ class App extends React.Component {
                     <Header />
                     <div className="container">
                         <div className="row">
-                            
+
                             {this.showContentMenus(routes)}
                         </div>
                     </div>
@@ -24,10 +24,10 @@ class App extends React.Component {
             </Router>
         );
     }
-    showContentMenus = (routes) => {
-        var result = '';
-        if (routes.length > 0) {
-            result = routes.map((route, index) => {
+    showContentMenus=(routes) => {
+        var result='';
+        if(routes.length>0) {
+            result=routes.map((route,index) => {
                 return (
                     <Route
                         key={index}
