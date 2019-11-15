@@ -1,7 +1,9 @@
 import React from 'react';
 import HomePage from './pages/HomePage/HomePage'
-import AboutPage from './pages/AboutPage/AboutPage';
+import AboutPage from './pages/AboutPage/AboutPage'
 import EventPage from './pages/EventPage/EventPage'
+import CharityPage from './pages/CharityPage/CharityPage'
+import EventDetailPage from './pages/EventPage/EventDetailPage'
 
 const routes=[
     {
@@ -13,6 +15,16 @@ const routes=[
         path: '/events',
         exact: true,
         main: () => <EventPage />
+    },
+    {
+        path: '/events/:id',
+        exact: true,
+        main: ({match}) => <EventDetailPage match={match} />
+    },
+    {
+        path: '/charities',
+        exact: true,
+        main: () => <CharityPage />
     },
     {
         path: '/about',

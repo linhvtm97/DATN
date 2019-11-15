@@ -46,6 +46,9 @@ const MenuLink=({label,to,activeOnlyWhenExact}) => {
     );
 };
 class Menu extends React.Component {
+    onClick=(e) => {
+        localStorage.removeItem('user')
+    }
     render() {
         return (
             <nav className="navbar navbar-inverse mg-0">
@@ -63,28 +66,55 @@ class Menu extends React.Component {
                             menus
                         )}
                     </ul>
-                    <ul className="nav navbar-nav navbar-right">
-                        <li>
-                            <a
-                                href="#signup"
-                                data-toggle="modal"
-                            >
-                                <span className="glyphicon glyphicon-user"></span>
-                                Signup
+                    <div className={(localStorage.getItem('user')!=null? 'hidden':'')}>
+                        <ul className="nav navbar-nav navbar-right">
+                            <li>
+                                <a
+                                    href="#signup"
+                                    data-toggle="modal"
+                                >
+                                    <span className="glyphicon glyphicon-user"></span>
+                                    Signup
                                                                       </a>
-                            <Signup />
-                        </li>
-                        <li>
-                            <a
-                                href="#login"
-                                data-toggle="modal"
-                            >
-                                <span className="glyphicon glyphicon-log-in"></span>
-                                Login
-                                                                      </a>
-                            <Login />
-                        </li>
-                    </ul>
+                                <Signup />
+                            </li>
+                            <li className={(localStorage.getItem('user')!=null? ' d-none':'')}>
+                                <a
+                                    href="#login"
+                                    data-toggle="modal"
+                                >
+                                    <span className="glyphicon glyphicon-log-in "></span>
+                                    Login
+                            </a>
+                                <Login />
+                            </li>
+                        </ul>
+                    </div>
+                    <div className={(localStorage.getItem('user')==null? 'hidden':'')}>
+                        <ul className="nav navbar-nav navbar-right">
+                            <li className={(localStorage.getItem('user')!=null? ' d-none':'')}>
+                                <a
+                                    href="/"
+                                    data-toggle="dropdown"
+                                >
+                                    <span className="glyphicon glyphicon-user "></span>{localStorage.getItem('user')}
+                                </a>
+                                <ul className="dropdown-menu">
+                                    <li><a href="/me">Profile</a></li>
+                                    <li><a href="/cart">Cart</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a
+                                    href="/"
+                                    onClick={this.onClick}
+                                >
+                                    <span className="glyphicon glyphicon-log-out "></span>Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
             </nav>
         );

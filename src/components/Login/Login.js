@@ -1,12 +1,21 @@
 import React from "react";
 import callApi from "../../utils/apiCaller";
+export const statusCode={
+  OK: 200,
+  BAD_REQUEST: 400,
+  UNAUTHORIZED: 401,
+  FORBIDDEN: 403,
+  NOT_FOUND: 404,
+  INTERNAL_SERVER_ERROR: 500,
+};
 
 class Login extends React.Component {
   constructor(props) {
     super(props);
     this.state={
       username: "",
-      password: ""
+      password: "",
+      isLoggedIn: false
     };
   }
 
@@ -31,9 +40,12 @@ class Login extends React.Component {
       username: username,
       password: password
     };
-
-    callApi("auth/login","POST",user).then((res) => {
-      console.log(res);
+    callApi("auth/login","POST",JSON.stringify(user)).then((res) => {
+      if(res.data.meta.status===statusCode.OK) {
+        this.setState({isLoggedIn: true});
+        localStorage.setItem('user',res.data.data.user.name)
+        window.location.replace("/");
+      }
     });
   };
 

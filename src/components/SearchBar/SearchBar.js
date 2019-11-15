@@ -31,26 +31,18 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container mg-10">
         <div className="row">
-          <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-            {/* <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-              <select name="location" className="form-control" value={this.state.location} onChange={this.onChange}>
-                <option value="0">Choose area</option>
-                <option value="1">Ha Noi</option>
-                <option value="2">Da Nang</option>
-                <option value="3">Ho Chi Minh</option>
-              </select>
-            </div> */}
-            <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-              <select name="filter" className="form-control" value={this.state.filter} onChange={this.onChange}>
-                <option value="0">Sort all</option>
-                <option value="1">Recently events</option>
-                <option value="2">High rating events</option>
-              </select>
-            </div>
+          <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <select name="filter" className="form-control" value={this.state.filter} onChange={this.onChange}>
+              <option value="0">Sort all</option>
+              <option value="1">Recently events</option>
+              <option value="2">High rating events</option>
+            </select>
           </div>
-          <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+          <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+          </div>
+          <div className="col-xs-9 col-sm-9 col-md-9 col-lg-9">
             <form method="POST" onSubmit={this.onSubmit}>
               <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                 <div className="form-group">

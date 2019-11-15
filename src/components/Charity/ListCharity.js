@@ -2,11 +2,11 @@ import React from 'react'
 import callApi from '../../utils/apiCaller';
 import SearchBar from '../SearchBar/SearchBar'
 
-class ListEvent extends React.Component {
+class ListCharity extends React.Component {
   constructor(props) {
     super(props);
     this.state={
-      events: [],
+      charities: [],
       searchValue: '',
       location: '',
       filter: ''
@@ -15,8 +15,10 @@ class ListEvent extends React.Component {
 
 
   componentDidMount() {
-    callApi('events','GET').then(res => {
-      this.setState({events: res.data.data})
+    callApi('charities','GET').then(res => {
+      this.setState({charities: res.data.data})
+      console.log(this.state);
+
     })
   }
   onSendQuery=(params) => {
@@ -27,15 +29,15 @@ class ListEvent extends React.Component {
     })
   }
   render() {
-    let {events,searchValue,filter}=this.state
+    let {charities,searchValue,filter}=this.state
 
     if(searchValue) {
-      events=events.filter(event => {
+      charities=charities.filter(event => {
         return event.name.toLowerCase().indexOf(searchValue)!==-1
       })
     }
     if(filter) {
-      events=events.sort((a,b) => {
+      charities=charities.sort((a,b) => {
         if(filter==='0') {
           return 0
         }
@@ -52,20 +54,18 @@ class ListEvent extends React.Component {
         <SearchBar onSendQuery={this.onSendQuery} />
         <div className="row">
           {
-            events.map((item,index) => {
+            charities.map((item,index) => {
               return (
-                <div className="col-xs-3 col-sm-4 col-4 col-md-3 col-lg-3 mg-10" key={index}>
-                  <img src={item.avatar} className="image-thumbnail" alt="Item"></img>
-                  <a href={`events/${item.id}`}>
+                <div className="col-xs-4 col-sm-4 col-4 col-md-4 col-lg-4 mg-10" key={index}>
+                  <a href="/">
                     <h3>{item.name}</h3>
                   </a>
-                  <i className="fa fa-map-marker">{item.location}</i>
-                  <p>Start date: {item.start_date}</p>
-                  <h5>{item.description}</h5>
-
-                  <div className="text-center">
-                    <button type="button" class="btn btn-danger">Shop now</button>
+                  <div className="image-container">
+                    <img src={item.avatar} className="image-thumbnail" alt="Item"></img>
                   </div>
+                  <h5>{item.phone_number}</h5>
+                  <i className="fa fa-map-marker">{item.address}</i>
+
                 </div>
               )
             })
@@ -77,4 +77,4 @@ class ListEvent extends React.Component {
 
 }
 
-export default ListEvent
+export default ListCharity
