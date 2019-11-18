@@ -4,6 +4,7 @@ import AboutPage from './pages/AboutPage/AboutPage'
 import EventPage from './pages/EventPage/EventPage'
 import CharityPage from './pages/CharityPage/CharityPage'
 import EventDetailPage from './pages/EventPage/EventDetailPage'
+import ProductPage from './pages/ProductPage/ProductPage'
 
 const routes=[
     {
@@ -25,6 +26,11 @@ const routes=[
         path: '/charities',
         exact: true,
         main: () => <CharityPage />
+    },
+    {
+        path: '/shop?event=:id',
+        exact: true,
+        main: ({match}) => <ProductPage match={match} />
     },
     {
         path: '/about',

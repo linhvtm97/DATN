@@ -62,3 +62,8 @@ li {
           height: 210px;
           width: 100%;
 }
+.hard-button {
+          font-size: 28px !important;
+          margin-left: 10px !important;
+          margin-right: 10px !important;
+}
