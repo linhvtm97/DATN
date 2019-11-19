@@ -2,7 +2,7 @@ import React from "react";
 import {Route,Link} from "react-router-dom";
 import Login from "../Login/Login";
 import Signup from "../Signup/Signup";
-import '../../App.css'
+import '../../App.css';
 
 const menus=[
     {

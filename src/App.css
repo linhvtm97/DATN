@@ -67,3 +67,34 @@ li {
           margin-left: 10px !important;
           margin-right: 10px !important;
 }
+.no-padding {
+          padding-right: 0px !important;
+          padding-left: 0px !important;
+          padding-top: 0px !important;
+          padding-bottom: 0px !important;
+}
+.overlay {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 100%;
+          width: 100%;
+          opacity: 0;
+          transition: 0.5s ease;
+          background-color: #fff;
+}
+.image-container:hover .overlay {
+          opacity: 0.8;
+}
+.block-center {
+          padding-right: 50px !important;
+          padding-left: 50px !important;
+          padding-top: 50px !important;
+          padding-bottom: 50px !important;
+}
+hr.style5 {
+          background-color: #fff;
+          border-top: 2px dashed #8c8b8b;
+}

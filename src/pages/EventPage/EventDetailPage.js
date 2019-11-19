@@ -67,7 +67,7 @@ class EventDetailPage extends Component {
 
             <p>Last chance to give!</p>
             <div className="text-center">
-              <button type="button" class="btn btn-danger" onClick={this.onClick}>Shop now</button>
+              <a class="btn btn-danger" href={`/shop/event/${event.id}`} role="button">Shop now</a>
             </div>
           </div>
         </div>
@@ -76,7 +76,7 @@ class EventDetailPage extends Component {
           <h4><i className="fa fa-users"></i>1000 people contributed</h4>
           <h3>Make a difference & raise some goods for</h3>
           <a href="/"><h5>The New York Foundling</h5></a>
-          <button type="button" class="btn btn-danger" onClick={this.onClick}>Shop now</button>
+          <a class="btn btn-danger" href={`/shop/event/${event.id}`} role="button">Shop now</a>
         </div>
       </div>
     );

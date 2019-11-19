@@ -28,7 +28,7 @@ const routes=[
         main: () => <CharityPage />
     },
     {
-        path: '/shop?event=:id',
+        path: '/shop/event/:id',
         exact: true,
         main: ({match}) => <ProductPage match={match} />
     },
