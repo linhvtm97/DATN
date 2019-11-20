@@ -51,25 +51,27 @@ class ListCharity extends React.Component {
 
     return (
       <div className="container">
-        <SearchBar onSendQuery={this.onSendQuery} />
         <div className="row">
-          {
-            charities.map((item,index) => {
-              return (
-                <div className="col-xs-4 col-sm-4 col-4 col-md-4 col-lg-4 mg-10" key={index}>
-                  <a href="/">
-                    <h3>{item.name}</h3>
-                  </a>
-                  <div className="image-container">
-                    <img src={item.avatar} className="image-thumbnail" alt="Item"></img>
-                  </div>
-                  <h5>{item.phone_number}</h5>
-                  <i className="fa fa-map-marker">{item.address}</i>
-
-                </div>
-              )
-            })
-          }
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <SearchBar onSendQuery={this.onSendQuery} />
+              {
+                charities.map((item,index) => {
+                  return (
+                    <div className="col-xs-4 col-sm-4 col-4 col-md-4 col-lg-4 mg-10" key={index}>
+                      <div className="container">
+                        <a href="/">
+                          <h3>{item.name}</h3>
+                        </a>
+                        <h5>{item.phone_number}</h5>
+                        <i className="fa fa-map-marker">{item.address}</i>
+                      </div>
+                    </div>
+                  )
+                })
+              }
+            </div>
+          </div>
         </div>
       </div>
     );

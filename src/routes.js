@@ -5,6 +5,8 @@ import EventPage from './pages/EventPage/EventPage'
 import CharityPage from './pages/CharityPage/CharityPage'
 import EventDetailPage from './pages/EventPage/EventDetailPage'
 import ProductPage from './pages/ProductPage/ProductPage'
+import CharityPartnerPage from './pages/CharityPage/CharityParnerPage'
+import ContactUsPage from './pages/ContactUsPage/ContactUsPage';
 
 const routes=[
     {
@@ -28,6 +30,11 @@ const routes=[
         main: () => <CharityPage />
     },
     {
+        path: '/charities-partner',
+        exact: true,
+        main: () => <CharityPartnerPage />
+    },
+    {
         path: '/shop/event/:id',
         exact: true,
         main: ({match}) => <ProductPage match={match} />
@@ -36,6 +43,11 @@ const routes=[
         path: '/about',
         exact: true,
         main: () => <AboutPage />
+    },
+    {
+        path: '/contact-us',
+        exact: true,
+        main: () => <ContactUsPage />
     },
 ];
 export default routes;

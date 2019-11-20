@@ -13,10 +13,6 @@ class EventDetailPage extends Component {
       width: width
     }
   }
-  // onClick=(e) => {
-  //   e.preventDefault();
-  //   <Link />
-  // }
   componentDidMount() {
     let {match}=this.props;
     let id=match.params.id
@@ -40,7 +36,7 @@ class EventDetailPage extends Component {
         </hr>
         <div className="container">
           <div className="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-            <img src="/images/bg2.jpg" className="img-thumbnail"></img>
+            <img src="/images/bg2.jpg" className="img-thumbnail" alt="bg"></img>
             <h3 className="text-white">Share with</h3>
             <button type="button" className="btn btn-primary"><i className="fa fa-facebook-f pr-1"></i></button>
             <button type="button" className="btn btn-info"><i className="fa fa-instagram pr-1"></i></button>
@@ -48,9 +44,9 @@ class EventDetailPage extends Component {
             <button type="button" className="btn btn-primary"><i className="fa fa-twitter pr-1"></i></button>
             <h3>{event.name}</h3>
             <p>{event.text}</p>
-            <img src="/images/bg2.jpg" className="img-thumbnail"></img>
+            <img src="/images/bg2.jpg" className="img-thumbnail" alt="bg"></img>
             <p>Some text here</p>
-            <img src="/images/bg2.jpg" className="img-thumbnail"></img>
+            <img src="/images/bg2.jpg" className="img-thumbnail" alt="bg"></img>
           </div>
           <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
             <p>{event.description}</p>

@@ -13,7 +13,7 @@ class Footer extends React.Component {
                 <a href="/about">About Us</a>
               </li>
               <li className="mb-3">
-                <a href="/contact">Contact Us</a>
+                <a href="/contact-us">Contact Us</a>
               </li>
               <li className="mb-3">
                 <a href="help.html">Help</a>

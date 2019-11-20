@@ -4,14 +4,6 @@ class AboutPage extends React.Component {
     render() {
         return (
             <div className="container">
-                <ul className="nav navbar-nav">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <li className="active">
-                        <a href="/about">About us</a>
-                    </li>
-                </ul>
                 {/* <div className="py-sm-1 py-1">
                     <h3 className="tittle">
                         <span>A</span>bout
@@ -140,6 +132,11 @@ class AboutPage extends React.Component {
                             </div>
                         </div>
                     </div>
+                </div>
+                <hr className="style5"></hr>
+                <div className="container text-center mg-10">
+                    <h4><i>If you want to get more information, Do not hesitage to contact us!</i></h4>
+                    <a class="btn btn-info hard-button" href='/contact-us' role="button">Contact us</a>
                 </div>
             </div>
         );

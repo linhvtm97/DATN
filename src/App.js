@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-// import Menu from './components/Menu/Menu';
 import routes from './routes';
 import {Switch,Route,BrowserRouter as Router} from 'react-router-dom';
 import Header from './components/Header/Header';
@@ -13,11 +12,8 @@ class App extends React.Component {
             <Router>
                 <div>
                     <Header />
-                    <div className="container">
-                        <div className="row">
-
-                            {this.showContentMenus(routes)}
-                        </div>
+                    <div className="row">
+                        {this.showContentMenus(routes)}
                     </div>
                     <Footer />
                 </div>

@@ -1,6 +1,5 @@
 import React from 'react'
 import callApi from '../../utils/apiCaller';
-import SearchBar from '../SearchBar/SearchBar'
 
 class ListEvent extends React.Component {
   constructor(props) {
@@ -91,7 +90,6 @@ class ListEvent extends React.Component {
             <br></br>
           </div>
           <div className="text-center">
-            <input type="search" name="" id="input" className="form-control" value="" required="required" title="" />
             <button type="button" className="btn btn-primary mg-10">Search</button>
           </div>
         </div>
