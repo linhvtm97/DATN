@@ -101,7 +101,7 @@ class Menu extends React.Component {
                                 </a>
                                 <ul className="dropdown-menu">
                                     <li><a href="/me">Profile</a></li>
-                                    <li><a href="/cart">Cart</a></li>
+                                    <li><a href="/checkout">Cart</a></li>
                                 </ul>
                             </li>
                             <li>

@@ -33,18 +33,18 @@ class Footer extends React.Component {
             <h3 className="text-white">Get in Touch</h3>
             <ul>
               <li className="text-white">
-                <i className="fa fa-map-marker" /> 123 Sebastian, USA.</li>
+                <i className="fa fa-map-marker" /> 54 Nguyen Luong Bang, Da Nang, VN</li>
               <li className="text-white">
-                <i className="fa fa-mobile" /> 333 222 3333 </li>
+                <i className="fa fa-mobile" /> (0121) 121 121 </li>
               <li className="text-white">
-                <i className="fa fa-phone" /> +222 11 4444 </li>
+                <i className="fa fa-phone" /> (0121) 121 122 </li>
               <li className="text-white">
                 <i className="fa fa-envelope-open" />
-                <a href="mailto:example@mail.com"> mail 1@example.com</a>
+                <a href="mailto:example@mail.com"> mail info1@givenow.com</a>
               </li>
               <li>
                 <i className="fa fa-envelope-open" />
-                <a href="mailto:example@mail.com"> mail 2@example.com</a>
+                <a href="mailto:example@mail.com"> mail info2@givenow.com</a>
               </li>
             </ul>
           </div>

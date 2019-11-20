@@ -31,7 +31,7 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div className="container mg-10">
+      <div className="container">
         <div className="row">
           <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3">
             <select name="filter" className="form-control" value={this.state.filter} onChange={this.onChange}>
@@ -40,7 +40,7 @@ class SearchBar extends Component {
               <option value="2">High rating events</option>
             </select>
           </div>
-          <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+          <div className="col-xs-2 col-sm-2 col-md-2 col-lg-2">
           </div>
           <div className="col-xs-9 col-sm-9 col-md-9 col-lg-9">
             <form method="POST" onSubmit={this.onSubmit}>

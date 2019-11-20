@@ -7,6 +7,7 @@ import EventDetailPage from './pages/EventPage/EventDetailPage'
 import ProductPage from './pages/ProductPage/ProductPage'
 import CharityPartnerPage from './pages/CharityPage/CharityParnerPage'
 import ContactUsPage from './pages/ContactUsPage/ContactUsPage';
+import PaymentPage from './pages/PaymentPage/PaymentPage';
 
 const routes=[
     {
@@ -38,6 +39,11 @@ const routes=[
         path: '/shop/event/:id',
         exact: true,
         main: ({match}) => <ProductPage match={match} />
+    },
+    {
+        path: '/checkout',
+        exact: true,
+        main: () => <PaymentPage />
     },
     {
         path: '/about',
